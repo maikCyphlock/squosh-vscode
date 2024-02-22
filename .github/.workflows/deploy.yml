@@ -1,0 +1,13 @@
+name: Deploy on marketplace
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - created
+      - name: Publish
+        if: success() && startsWith(github.ref, 'refs/tags/') && matrix.os == 'ubuntu-latest'
+        run: npm run deploy
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}

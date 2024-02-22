@@ -1,9 +1,14 @@
 {
   "name": "squosh",
-  "publisher": "maikcyphlock",
+  "icon": "icon/icon.png",
+  "publisher": "Maikcyphlock",
   "author": {
     "name": "MaikCyphlock",
     "url": "https://github.com/maikcyphlock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maikCyphlock/squosh-vscode"
   },
   "displayName": "squosh",
   "description": "extension to compress images",
@@ -34,10 +39,11 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base --minify",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
-    "test-compile": "tsc -p ./"
+    "test-compile": "tsc -p ./",
+    "deploy": "npx vsce publish "
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
