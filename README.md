@@ -1,4 +1,4 @@
-# Squoosh VS Code Extension
+# Squoosh
 
 Squoosh is a Visual Studio Code extension designed to optimize images right in your editor. It allows you to reduce file sizes while maintaining image quality, ensuring faster load times for your web applications.
 
@@ -9,6 +9,24 @@ Squoosh is a Visual Studio Code extension designed to optimize images right in y
 - **Quality Control**: Adjust the quality of the compressed images, allowing for a balance between file size and image quality.
 - **Bulk Compression**: Optimize multiple images at once with a single command.
 - **User-Friendly Interface**: An intuitive interface that makes image optimization a breeze.
+
+## showcase
+
+#### click on image file or folder with photos to compress
+
+![alt text](assets/ex-1.png)
+
+#### choose ouput format
+
+![alt text](assets/ex-2.png)
+
+#### choose quality level
+
+![alt text](assets/ex-3.png)
+
+#### example
+
+<video controls src="assets/squosh.mp4" title="squosh example"></video>
 
 ## Requirements
 
